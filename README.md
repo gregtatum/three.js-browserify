@@ -2,6 +2,12 @@
 
 This is a basic starting point for a project using Three.js and Browserify. It includes a central project graph called a poem, and a level manifest to load in multiple poem configurations. There is a components directory for reusable modules.
 
+### Install
+
+ * Git clone this repo.
+ * In terminal run `npm install`
+ * In terminal run `gulp` to start watching for changed files
+
 ### Poem
 
 The main graph for your project is the `Poem` object, as in programing poem (or sketch, demo, code art, etc.) It's passed in to each component and is available globally for ease in debugging.
@@ -74,5 +80,10 @@ Loading a new level will load the `levels/demo.js` file. It will then destroy th
 
 Components are accessible from the main `poem` object. You can also create a manager component which manually loads in other components as a different option. Keep an eye out for tight coupling of different components.
 
+
+### To-do
+
+ - [ ] Add some kind of URL router
+ - [ ] The gulpfile is kind of a mess
 
 Project copyright (c) 2014 Greg Tatum under The MIT License (MIT)
