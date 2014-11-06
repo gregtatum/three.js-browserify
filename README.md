@@ -5,8 +5,9 @@ This is a basic starting point for a project using Three.js and Browserify. It i
 ### Install
 
  * Git clone this repo.
- * In terminal run `npm install`
+ * In terminal go into the directory and run `npm install`
  * In terminal run `gulp` to start watching for changed files
+ * Replace the credits with your own info, and put in your Google Analytics account.
 
 ### Poem
 
