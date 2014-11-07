@@ -33,7 +33,7 @@ Usage: `poem.on('update', callback);`
 
 ### Levels
 
-Create multiple levels by declaring them in the `/js/levels/` folder. Create reusable components in `/js/components/` or other folders.
+Create multiple levels by creating level manifest files in the `/js/levels/` folder. These manifests add the reusable components in `/js/components/` or other folders.
 
 #### Example level manifest:
 
@@ -62,11 +62,15 @@ Create multiple levels by declaring them in the `/js/levels/` folder. Create reu
 		}
 	}
 
-So in this example the `poem` object will have `poem.sphere` as a property. For some pseudocode explaining what that looks like in practice is something like this:
+So in this example the `poem` object will have `poem.sphere` as a property. For some pseudocode explaining what it looks like when the poem creates the sphere, it basically runs this:
 
-	poem.sphere = new Spheres( poem, properties );
+	poem.sphere = new Spheres( poem, level.properties );
 
-Use the properties value to configure your object.
+### Create a new level
+
+ * Create a level manifest like the above
+ * Add an entry to `/js/levels/index.js` where the key is the string you will use in the `LevelLoader`
+ * Create some logic using the LevelLoader to actually load in the level
 
 ### Level Loader
 
